@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+Table {
+    width: 60%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #000000;
+    border-style: solid;
+    color: #000000;
+    margin-bottom: 2%;
+  }
+
+  table.Table td, table.Table th {
+    border-width: 2px;
+    border-color: #000000;
+    border-style: solid;
+    padding: 10px;
+
+  }
+  .columnButton{
+    width: 2%;
+  }
+
+  table.Table thead {
+    background-color: #979c98;
+  }
+  tbody tr:nth-child(even) {background: white}
+  tbody tr:nth-child(odd) {background: #d5ded7}
+
+  .assignment{
+    width: 5%;
+  }
+  .average{
+    text-align: right;
+    width: 5%;
+  }
+  .details{
+    text-align: left;
+  }
+
+  .outerButtons{
+    border-radius: 12px;
+    padding: 12px;
+  }
+
+  .below-sixty {
+    color: white;
+    background-color: red;
+  }
+  .unsubmitted{
+    background-color: yellow;
+
+  }
+
+  .footer{
+    border-top: solid black 1px;
+    padding: 15px;
+    position:absolute;
+    top:800px;
+    width: 100%;
+  }

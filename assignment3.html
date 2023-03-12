@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assignment3.css">
+    </head>
+    <body>
+
+    <h1>Student grades table</h1>
+    <table id="grades"class="Table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID No.</th>
+          <th>Assignment 1</th>
+          <th>Assignment 2</th>
+          <th>Assignment 3</th>
+          <th>Assignment 4</th>
+          <th>Assignment 5</th>
+          <th>Average(%)</th>
+          <th class="columnButton"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="Row2">
+          <!--Sample Data-->
+          <td class="name">Michael Doe</td>
+          <td class="studentID">12345</td>
+          <td class="assignment" contenteditable="true">100</td>
+          <td class="assignment" contenteditable="true">90</td>
+          <td class="assignment" contenteditable="true">70</td>
+          <td class="assignment" contenteditable="true">55</td>
+          <td class="assignment" contenteditable="true">67</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+        </tr>
+        <tr>
+          <td class="name">Howard Klein</td>
+          <td class="studentID">45432</td>
+          <td class="assignment" contenteditable="true">12</td>
+          <td class="assignment" contenteditable="true">33</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="assignment" contenteditable="true">40</td>
+          <td class="assignment" contenteditable="true">27</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+        </tr>
+        <tr>
+          <td class="name">John Smith</td>
+          <td class="studentID">12346</td>
+          <td class="assignment" contenteditable="true">34</td>
+          <td class="assignment" contenteditable="true">45</td>
+          <td class="assignment" contenteditable="true">55</td>
+          <td class="assignment" contenteditable="true">87</td>
+          <td class="assignment" contenteditable="true">66</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+        </tr>
+        <tr>
+          <td class="name">Emily Brown</td>
+          <td class="studentID">98765</td>
+          <td class="assignment" contenteditable="true">98</td>
+          <td class="assignment" contenteditable="true">100</td>
+          <td class="assignment" contenteditable="true">82</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="assignment" contenteditable="true">57</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+
+        </tr>
+        <tr>
+          <td class="name">Liam Patel</td>
+          <td class="studentID">56789</td>
+          <td class="assignment" contenteditable="true">85</td>
+          <td class="assignment" contenteditable="true">92</td>
+          <td class="assignment" contenteditable="true">78</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="assignment" contenteditable="true">91</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+
+        </tr>
+        <tr>
+          <td class="name">Ava Davis</td>
+          <td class="studentID">24680</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="assignment" contenteditable="true">76</td>
+          <td class="assignment" contenteditable="true">89</td>
+          <td class="assignment" contenteditable="true">93</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+
+        </tr>
+        <tr>
+          <td class="name">Noah Lee</td>
+          <td class="studentID">54345</td>
+          <td class="assignment" contenteditable="true">63</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="assignment" contenteditable="true">80</td>
+          <td class="assignment" contenteditable="true">71</td>
+          <td class="assignment" contenteditable="true">94</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+
+        </tr>
+        <tr>
+          <td class="name">Sean O'Brien</td>
+          <td class="studentID">13584</td>
+          <td class="assignment" contenteditable="true">88</td>
+          <td class="assignment" contenteditable="true">95</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="assignment" contenteditable="true">82</td>
+          <td class="assignment" contenteditable="true">78</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+
+        </tr>
+        <tr>
+          <td class="name">Ethan Chen</td>
+          <td class="studentID">85334</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="assignment" contenteditable="true">87</td>
+          <td class="assignment" contenteditable="true">70</td>
+          <td class="assignment" contenteditable="true">65</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+
+        </tr>
+        <tr>
+          <td class="name">Lewis Monty</td>
+          <td class="studentID">74354</td>
+          <td class="assignment" contenteditable="true">76</td>
+          <td class="assignment" contenteditable="true">81</td>
+          <td class="assignment" contenteditable="true">91</td>
+          <td class="assignment" contenteditable="true">-</td>
+          <td class="assignment" contenteditable="true">83</td>
+          <td class="average"></td>
+          <td><button onclick="deleteRow(this)">Delete</button></td> <!-- new button column -->
+
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="calculateGrades()" id="finalGrades" class="outerButtons">Calculate Final Grades</button>
+    <button class="outerButtons" type="button" onclick="addRow()">Add new Row</button>
+    <button class="outerButtons" type="button" onClick="addAssignment()">Add Assignment</button>
+
+    <script src="assignment3.js"></script>
+
+
+    </body>
+    <div class="footer"><a>Alex McGrath - 21397613</a>
+      <br>
+      <a>CS230 - Assignment 3</a>
+  </div>
+</html>
